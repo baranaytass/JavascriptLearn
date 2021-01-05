@@ -1,0 +1,250 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+/* GLOBAL STYLES */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f8;
+  margin:0;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  -webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: hsl(210, 22%, 49%);
+}
+
+li, a {
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: #53b653;
+  text-decoration: none;
+}
+
+/* NAVBAR */
+
+nav {
+  height: 72px;
+  box-shadow: 0 2px 44px 0 rgba(0,0,0,.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo {
+  width: 24%;
+  cursor: pointer;
+  margin: 10px 16px 16px 64px;
+}
+
+.nav-links {
+  list-style: none;
+  margin-right: 156px;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #bdeebd;
+}
+
+/* MAİN */
+
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  width: 48%;
+  height: 36%;
+  border-radius: 48px;
+}
+
+.container h2 {
+  color: rgb(32, 31, 31);
+  padding: 1rem;
+  border-radius: 16px;
+  margin-top: 36px;
+}
+
+.color {
+  color: rgb(51, 47, 47);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 7px #a0f798, 0 0 5px #a0f798, 0 0 12px #a0f798, 0 0 15px #a0f798, 0 0 10px #a0f798;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 8px #4ae63c, 0 0 10px #4ae63c, 0 0 10px #4ae63c, 0 0 15px #4ae63c, 0 0 16px #4ae63c, 0 0 20px #4ae63c;
+  }
+}
+
+input {
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  width: 120px;
+}
+
+button,input:focus{
+    outline: none;
+}
+
+.btn-hero {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  background: transparent;
+  color: #222;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  border: 2px solid #222;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.btn-hero:hover {
+  color: #fff;
+  background: #222;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.5);
+  display: grid;
+  place-items: center;
+  transition: all 1s linear;
+  visibility: hidden;
+  z-index: -10;
+  animation: hide .25s;
+  transform: scale(0);
+}@keyframes hide {
+  from{
+      z-index:2;
+transform: scale(1);
+    opacity:1;
+  } to{
+      z-index:-1;
+transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+  animation: show .2s;
+  transform: scale(1);
+}@keyframes show {
+  from{
+    
+transform: scale(0);
+    opacity:0;
+      z-index:-1;
+  } to{
+    
+transform: scale(1);
+    opacity: 1;
+      z-index:2;
+  }
+}
+
+.modal-container {
+  border-radius: 0.5rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+/*.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: hsl(360, 67%, 44%);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.close-btn:hover {
+  color: hsl(360, 71%, 66%);
+  transform: scale(1.3);
+}*/

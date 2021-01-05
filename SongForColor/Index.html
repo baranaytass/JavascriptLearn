@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Song For Color</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <img class="logo" src="logo.png" alt="logo">
+      <ul class="nav-links">
+        <li><a href="#">Get a Song</a></li>
+        <li><a href="#">Add a Song</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div id="enter-div" class="container">
+      <button class="btn btn-hero" id="randomBtn" style="margin-top: 13%">Random Color</button>
+      <button class="btn btn-hero" id="chooseBtn">I will Choose</button>
+    </div>
+
+    <div id="random-container" class="container">
+      <h2>
+        Here is your color :
+        <span class="color" id="color">
+          #F1F5F8
+        </span>
+      </h2>
+      <button class="btn btn-hero" id="change-button">change</button>
+      <button class="btn btn-hero" id="pick-button1">pick</button>
+    </div>
+
+    <div id="choose-container" class="container">
+      <h2>
+        background Color :
+        <span class="color">
+          #<input oninput="this.value = this.value.toUpperCase()" spellcheck="false" class="color" type="text"
+            id="input-color" value="F1F5F8"></input>
+        </span>
+      </h2>
+      <button class="btn btn-hero" id="show-button">show</button>
+      <button class="btn btn-hero" id="pick-button2">pick</button>
+    </div>
+    <div class="modal-overlay" id="modal">
+      <div class="modal-container">
+        <iframe src="https://open.spotify.com/embed/track/1foMv2HQwfQ2vntFf9HFeG" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>

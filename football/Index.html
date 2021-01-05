@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Oyunum</title>
+</head>
+<body>
+  <div id="head">JAVASCRIPT FOOTBALL</div>
+  <button id="easy" onclick="runGame(1)">EASY</button>
+  <button id="medium" onclick="runGame(2)">MEDIUM</button>
+  <button id="hard" onclick="runGame(3)">HARD</button>
+
+  <canvas id="game" width="600" height="400"></canvas>
+
+  <script src="script.js" charset="utf-8"></script>
+  <script>
+    var runGame = () => {
+      document.getElementById("head").style.display = "none"
+      document.getElementById("easy").style.display = "none"
+      document.getElementById("medium").style.display = "none"
+      document.getElementById("game").style.display = "block"
+      document.getElementById("hard").style.display = "none"
+
+      startGame()
+    }
+
+
+  </script>
+</body>
+</html>
